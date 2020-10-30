@@ -24,13 +24,11 @@ public class Feel extends BasePage {
 	    private static final Logger lOGGER = LogManager.getLogger(HomePage.class.getName());
 
 		public void disappointed() {
-	    	wait.forPage();
 	    	wait.forElementToBeVisible(disappointed);
 	    	click(disappointed);
 	    }
 
 		public void doneChoosing() {
-	    	wait.forPage();
 			wait.forElementToBeVisible(doneChoosing);
 			click(doneChoosing);
 	    }

@@ -25,12 +25,12 @@ public class Issues extends BasePage {
 	private static final Logger lOGGER = LogManager.getLogger(HomePage.class.getName());
 
 	public void needMoreTime() {
-		wait.forPage();
+		wait.forElementToBeVisible(needMoreTime);
 		click(needMoreTime);
 	}
 
 	public void doneChoosing() {
-		wait.forPage();
+		wait.forElementToBeVisible(doneChoosing);
 		click(doneChoosing);
 	}
 }

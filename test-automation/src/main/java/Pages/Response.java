@@ -46,43 +46,42 @@ public class Response extends BasePage {
 
 	    private static final Logger lOGGER = LogManager.getLogger(HomePage.class.getName());
 
-	    
 	    public void title() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(title);
 	    	Select ab = new Select(title);
 	    	ab.selectByValue("Mr");
 	    	
 	    }
 	    
 	    public void firstName() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(firstName);
 	    	sendKeys(firstName, "aviraj");
 	    }
 	    public void lastname() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(lastname);
 	    	sendKeys(lastname, "abc");
 	    }
 
 		
 	    public void email() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(email);
 	    	sendKeys(email, "pavirajuv@gmail.com");
 	    }
 	    
 	    public void post() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(post);
 	    	click(post);
 	    }
 	    public void option2() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(option2);
 	    	click(option2);
 	    }
 	    public void option3() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(option3);
 	    	click(option3);
 	    }
 	    public void doneChoosing() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(doneChoosing);
 	    	click(doneChoosing);
 	    }
 }

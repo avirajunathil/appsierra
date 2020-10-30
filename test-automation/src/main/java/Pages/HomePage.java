@@ -26,19 +26,19 @@ public class HomePage extends BasePage {
     }
 
     public void clickOnSignUPButton() {
-        wait.forPage();
+        wait.forElementToBeVisible(signUpButton);
         click(signUpButton);
         lOGGER.info("clicked on Sign up button");
     }
 
     public void clickOnLoginButton() {
-        wait.forPage();
+        wait.forElementToBeVisible(loginButton);
         click(loginButton);
         lOGGER.info("clicked on Login Button");
     }
 
     public void clickOnUseAsOurGuestLink() {
-        wait.forPage();
+        wait.forElementToBeVisible(useAsOurGuestLink);
         click(useAsOurGuestLink);
         lOGGER.info("clicked on Use As Our Guest Link Button");
     }

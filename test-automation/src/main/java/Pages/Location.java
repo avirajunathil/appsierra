@@ -41,22 +41,22 @@ public class Location extends BasePage {
 	private static final Logger lOGGER = LogManager.getLogger(HomePage.class.getName());
 
 	public void address1() {
-		wait.forPage();
+		wait.forElementToBeVisible(address1);
 		sendKeys(address1, "24/23 zonara street");
 	}
 
 	public void address2() {
-		wait.forPage();
+		wait.forElementToBeVisible(address2);
 		sendKeys(address2, "varikuzhi lodge");
 	}
 
 	public void city() {
-		wait.forPage();
+		wait.forElementToBeVisible(city);
 		sendKeys(city, "burrywood");
 	}
 
 	public void state() {
-		wait.forPage();
+		wait.forElementToBeVisible(state);
 		click(state);
 		Select ab = new Select(state);
 		ab.selectByValue("8");
@@ -64,19 +64,19 @@ public class Location extends BasePage {
 	}
 
 	public void postcode() {
-		wait.forPage();
+		wait.forElementToBeVisible(postcode);
 		sendKeys(postcode, "6100");
 	}
 
 	public void country() {
-		wait.forPage();
+		wait.forElementToBeVisible(country);
 		Select ab = new Select(country);
 		ab.selectByValue("1");
 
 	}
 
 	public void submit() {
-		wait.forPage();
+		wait.forElementToBeVisible(submit);
 		click(submit);
 	}
 }

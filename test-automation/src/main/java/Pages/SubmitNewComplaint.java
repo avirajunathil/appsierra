@@ -33,22 +33,22 @@ public class SubmitNewComplaint extends BasePage {
 	private static final Logger lOGGER = LogManager.getLogger(HomePage.class.getName());
 
 	public void submitComplaint() {
-		wait.forPage();
+		wait.forElementToBeVisible(submitComplaint);
 		click(submitComplaint);
 	}
 
 	public void energyComplaint() {
-		wait.forPage();
+		wait.forElementToBeVisible(energyComplaint);
 		click(energyComplaint);
 	}
 
 	public void payingBill() {
-		wait.forPage();
+		wait.forElementToBeVisible(payingBill);
 		click(payingBill);
 	}
 
 	public void doneChoosing() {
-		wait.forPage();
+		wait.forElementToBeVisible(doneChoosing);
 		click(doneChoosing);
 	}
 

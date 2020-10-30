@@ -43,40 +43,40 @@ public class SignUp extends BasePage {
 	    private static final Logger lOGGER = LogManager.getLogger(HomePage.class.getName());
 
 		public void getTitle() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(title);
 	    	click(title);
 	    	Select ob = new Select(title);
-	    	
 	    	ob.selectByValue("Ms");
 	    }
 	    
 		 public void firstName() {
-		    	wait.forPage();
-		    	sendKeys(firstName, "aviraj");
+			wait.forElementToBeVisible(firstName);
+			sendKeys(firstName, "aviraj");
 		    }
 		    
 	    public void lastName() {
-	    	wait.forPage();
-	    	sendKeys(lastName, "abc");
+			wait.forElementToBeVisible(lastName);
+			sendKeys(lastName, "abc");
 	    }
 	    
 	    public void password() {
 	    	wait.forPage();
+			wait.forElementToBeVisible(password);
 	    	sendKeys(password, "aviraj123");
 	    }
 	    
 	    public void newPassword() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(newPassword);
 	    	sendKeys(newPassword, "aviraj123");
 	    }
 
 	    public void checkbox() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(checkbox);
 	    	click(checkbox);	
 	    	
 	    }
 	    public void SignUpButton() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(SignUpButton);
 	    	click(SignUpButton);	
 	    	
 	    }

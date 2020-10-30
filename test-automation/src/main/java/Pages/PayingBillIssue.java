@@ -25,11 +25,11 @@ public class PayingBillIssue extends BasePage {
 	    private static final Logger lOGGER = LogManager.getLogger(HomePage.class.getName());
 
 		public void payingBill() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(payingBill);
 	    	click(payingBill);
 		}
 		public void doneChoosing() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(doneChoosing);
 	    	click(doneChoosing);
 	    }
 }

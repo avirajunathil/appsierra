@@ -24,7 +24,7 @@ public class EnergyComplaint extends BasePage {
 	    private static final Logger lOGGER = LogManager.getLogger(HomePage.class.getName());
 
 		public void energyComplaint() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(energyComplaint);
 	    	click(energyComplaint);
 	    }
 		

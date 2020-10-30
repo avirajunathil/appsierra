@@ -7,6 +7,7 @@ import java.awt.event.KeyEvent;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,6 +15,7 @@ import org.openqa.selenium.support.ui.Select;
 
 
 import commons.BasePage;
+import org.testng.Assert;
 
 public class OptionalDetails extends BasePage {
 
@@ -36,21 +38,21 @@ public class OptionalDetails extends BasePage {
 	    private static final Logger lOGGER = LogManager.getLogger(HomePage.class.getName());
 
 	    public void resolution() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(resolution);
 	    	Select ab = new Select(resolution);
 	    	ab.selectByValue("10");
 	    	
 	    }
 		
 		public void outcome1() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(outcome1);
 	    	sendKeys(outcome1, "payment plan");
 	    }
 		
 		public void chooseFile() throws AWTException {
-	    	wait.forPage();
+			wait.forElementToBeVisible(chooseFile);
 	    	click(chooseFile);
-			String projectpath = System.getProperty("user.dir") + "\\aaaaaaaaaaa.PNG";
+			String projectpath = System.getProperty("user.dir") + "\\simple.PNG";
 
 			Robot robot = new Robot();
 			robot.delay(2000);
@@ -66,10 +68,19 @@ public class OptionalDetails extends BasePage {
 			robot.keyPress(KeyEvent.VK_ENTER);
 			robot.keyRelease(KeyEvent.VK_ENTER);
 
-		}
+
+			if(driver.findElement(By.xpath("//SPAN[@class='file-name'][text()='simple.PNG']")).isDisplayed())
+			{
+				Assert.assertTrue(true, "Profile picture is Uploaded");
+			}
+			else {
+				Assert.assertTrue(false, "Profile picture not Uploaded");
+			}
+			}
+
 		
 		public void doneChoosing() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(doneChoosing);
 	    	click(doneChoosing);
 	    }
 }

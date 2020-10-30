@@ -1,5 +1,3 @@
-
-
 package Pages;
 
 import org.apache.logging.log4j.LogManager;
@@ -30,17 +28,17 @@ public class CompanyName extends BasePage {
 	    private static final Logger lOGGER = LogManager.getLogger(HomePage.class.getName());
 
 	    public void company() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(company);
 	    	sendKeys(company, "Perth");
-	    			}
+	    }
 	 	public void click() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(click);
 	    	click(click);
 	 }
 
 		
 		public void doneChoosing() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(doneChoosing);
 	    	click(doneChoosing);
 	    }
 }

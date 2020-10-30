@@ -26,16 +26,16 @@ public class LoginDetails extends BasePage{
 			super(driver);		}
 		
 		public void getUsername(String username1) {
-	    	wait.forPage();
+			wait.forElementToBeVisible(username);
 	    	sendKeys(username, username1);
 	    }
 	    
 	    public void getPassword(String password1) {
-	    	wait.forPage();
+			wait.forElementToBeVisible(password);
 	    	sendKeys(password, password1);
 	    }
 	    public void onClick() {
-	    	wait.forPage();
+			wait.forElementToBeVisible(Click);
 	    	click(Click);
 	    	
 	    }
