@@ -69,7 +69,7 @@ public class SignUp extends BasePage {
 	    	wait.forPage();
 	    	sendKeys(newPassword, "aviraj123");
 	    }
-	 
+
 	    public void checkbox() {
 	    	wait.forPage();
 	    	click(checkbox);	
