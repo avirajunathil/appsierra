@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 import commons.BasePage;
 
-public class LoginDetails extends BasePage {
+public class LoginDetails extends BasePage{
 
 
 	 @FindBy(xpath = "//input[@id='register-email']")
@@ -22,19 +22,17 @@ public class LoginDetails extends BasePage {
 	    
 	    private static final Logger lOGGER = LogManager.getLogger(HomePage.class.getName());
 
-	    
-
 		public LoginDetails(WebDriver driver) {
 			super(driver);		}
 		
-		public void getUsername() {
+		public void getUsername(String username1) {
 	    	wait.forPage();
-	    	sendKeys(username, "pavirajuv@gmail.com");
+	    	sendKeys(username, username1);
 	    }
 	    
-	    public void getPassword() {
+	    public void getPassword(String password1) {
 	    	wait.forPage();
-	    	sendKeys(password, "aviraj123");
+	    	sendKeys(password, password1);
 	    }
 	    public void onClick() {
 	    	wait.forPage();

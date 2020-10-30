@@ -18,8 +18,6 @@ public class HomePage extends BasePage {
 
     @FindBy(css = ".col-md-12.text-center>a:nth-of-type(3)")
     WebElement useAsOurGuestLink;
-    
-   
 
     private static final Logger lOGGER = LogManager.getLogger(HomePage.class.getName());
 

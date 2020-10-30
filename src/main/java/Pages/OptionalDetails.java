@@ -1,8 +1,7 @@
 
 package Pages;
 
-import java.awt.AWTException;
-import java.awt.Robot;
+import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
@@ -18,7 +17,6 @@ import commons.BasePage;
 
 public class OptionalDetails extends BasePage {
 
-
 	 public OptionalDetails(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
@@ -29,17 +27,14 @@ public class OptionalDetails extends BasePage {
 	
 	@FindBy(css = "#other-outcome1")
     WebElement outcome1;
-	@FindBy(css = "div.layout:nth-child(2) div.page div.container-fluid div.row:nth-child(3) div.col-md-12:nth-child(4) div.document-attachments div.form-group:nth-child(3) div:nth-child(4) label:nth-child(1) > span.btn.btn-default.btn-file")
+	@FindBy(xpath = "//span[contains(text(),'CHOOSE FILE')]")
     WebElement chooseFile;
 	
 	@FindBy(css = "#btn-next")
     WebElement doneChoosing;
-	
-	
-	    
+
 	    private static final Logger lOGGER = LogManager.getLogger(HomePage.class.getName());
 
-	    
 	    public void resolution() {
 	    	wait.forPage();
 	    	Select ab = new Select(resolution);
@@ -55,22 +50,23 @@ public class OptionalDetails extends BasePage {
 		public void chooseFile() throws AWTException {
 	    	wait.forPage();
 	    	click(chooseFile);
-	    Robot robot = new Robot();	
-	    robot.setAutoDelay(2000);
-	    StringSelection sc = new StringSelection("C:\\Users\\u39807\\Desktop\\aaaaaaaaaaa.PNG");
-	    java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sc, null);
-	    robot.setAutoDelay(2000);
-	    robot.keyPress(KeyEvent.VK_CONTROL);
-	    robot.keyPress(KeyEvent.VK_V);
-	    robot.keyRelease(KeyEvent.VK_CONTROL);
-	    robot.keyRelease(KeyEvent.VK_V);
-	    robot.setAutoDelay(2000);
-	    
-	    robot.keyPress(KeyEvent.VK_ENTER);
-	    robot.keyRelease(KeyEvent.VK_ENTER);
-	    robot.setAutoDelay(5000);
-	    
-	    }
+			String projectpath = System.getProperty("user.dir") + "\\aaaaaaaaaaa.PNG";
+
+			Robot robot = new Robot();
+			robot.delay(2000);
+			StringSelection stringSelection = new StringSelection(projectpath);
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
+
+			robot.setAutoDelay(1000);
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_V);
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_V);
+			robot.setAutoDelay(1000);
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+
+		}
 		
 		public void doneChoosing() {
 	    	wait.forPage();

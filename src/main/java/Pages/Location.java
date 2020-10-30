@@ -42,12 +42,12 @@ public class Location extends BasePage {
 
 	public void address1() {
 		wait.forPage();
-		sendKeys(address1, "24/23 sfdaffaa dfasfa");
+		sendKeys(address1, "24/23 zonara street");
 	}
 
 	public void address2() {
 		wait.forPage();
-		sendKeys(address2, "sfdaffaa dfasfa");
+		sendKeys(address2, "varikuzhi lodge");
 	}
 
 	public void city() {

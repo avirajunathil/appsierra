@@ -34,7 +34,7 @@ public class SignUp extends BasePage {
 	    @FindBy(xpath = "//input[@id='newcomplaintuser-password-confirm']")
 	    WebElement newPassword;
 	   
-	    @FindBy(css = "div.layout:nth-child(2) div.page div.container div.row:nth-child(2) div.col-md-12 div.form-group:nth-child(7) div.checkbox > label:nth-child(2)")
+	    @FindBy(xpath = "//input[@id='newcomplaintuser-signup']")
 	    WebElement checkbox;
 	  
 	    @FindBy(css = "#LoginButton")
@@ -42,8 +42,6 @@ public class SignUp extends BasePage {
 	    
 	    private static final Logger lOGGER = LogManager.getLogger(HomePage.class.getName());
 
-	    
-		
 		public void getTitle() {
 	    	wait.forPage();
 	    	click(title);
@@ -71,9 +69,7 @@ public class SignUp extends BasePage {
 	    	wait.forPage();
 	    	sendKeys(newPassword, "aviraj123");
 	    }
-	    
-	   
-	    
+	 
 	    public void checkbox() {
 	    	wait.forPage();
 	    	click(checkbox);	

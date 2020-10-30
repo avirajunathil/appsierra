@@ -32,13 +32,13 @@ public class Response extends BasePage {
 	@FindBy(css = "#contact-email")
 	WebElement email;
     
-	@FindBy(css = "div.layout:nth-child(2) div.page div.container-fluid form.list-form div.row.response-input-group:nth-child(3) div.col-md-12.pad-bot-25 div.row:nth-child(8) div.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4.check-list.clearfix div.check-list:nth-child(3) div.radio > label.checkbox-text.clearfix")
+	@FindBy(css = "//LABEL[@class='checkbox-text clearfix'][text()='Post']")
 	WebElement post;
 	
-	@FindBy(css = "div.layout:nth-child(2) div.page div.container-fluid form.list-form div.row.response-input-group:nth-child(3) div.col-md-12.pad-bot-25 div.row:nth-child(10) div.form-group.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4 div.checkbox.reset-checkbox label.response-terms:nth-child(2) > p.pad-left-45.sml-font")
+	@FindBy(xpath = "//*[contains(text(), 'I would like to share my experience with others to improve awareness and outcomes.')]\n")
 	WebElement option2;
 	
-	@FindBy(css = "div.layout:nth-child(2) div.page div.container-fluid form.list-form div.row.response-input-group:nth-child(3) div.col-md-12.pad-bot-25 div.row:nth-child(11) div.form-group.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4 div.checkbox.reset-checkbox label.response-terms:nth-child(2) > p.pad-left-45.sml-font")
+	@FindBy(xpath = "//*[contains(text(), 'I would like to receive news and offers from Handle My Complaint')]\n")
 	WebElement option3;
 	
 	@FindBy(css = "#submit-step")
