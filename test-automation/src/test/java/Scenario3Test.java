@@ -71,7 +71,8 @@ public class Scenario3Test extends TestBase {
 		location.submit();
 		CompanyName companyName = new CompanyName(driver);
 		companyName.company();
-		companyName.click();
+		companyName.clickOnEnergyCompanyOption();
+		companyName.companyName();
 		companyName.doneChoosing();
 		OptionalDetails optionalDetails = new OptionalDetails(driver);
 		optionalDetails.resolution();
@@ -82,8 +83,12 @@ public class Scenario3Test extends TestBase {
 		response.title();
 		response.firstName();
 		response.lastname();
-		response.email();
+		response.email(property.getProperty("username1"));
+		response.post();
+		response.option2();
+		response.option3();
 		response.doneChoosing();
+
 
 	}
 
